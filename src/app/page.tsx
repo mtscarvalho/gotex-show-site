@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      <div>Hello world!</div>
-    </main>
+    <div>
+      <h2 className="card bg-">Hello world</h2>
+    </div>
   );
 }
