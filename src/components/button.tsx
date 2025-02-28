@@ -11,7 +11,7 @@ const buttonLero = tv({
     },
     variant: {
       primary: "bg-brand-primary text-on-brand hover:bg-brand-primary-hover disabled:bg-disabled disabled:border-disabled disabled:border disabled:text-on-disabled",
-      outline: "bg-default border border-default text-default hover:bg-brand-secondary hover:text-brand-secondary disabled:bg-disabled disabled:border-disabled disabled:border disabled:text-on-disabled",
+      outline: "bg-default border border-default text-default hover:border-brand-secondary hover:text-brand-secondary disabled:bg-disabled disabled:border-disabled disabled:border disabled:text-on-disabled",
       subtle: "text-default hover:text-brand-secondary disabled:text-on-disabled",
     },
     defaultVariants: {
