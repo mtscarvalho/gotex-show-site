@@ -3,17 +3,19 @@ import React from "react";
 import { Button } from "./button";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { Topbar } from "./topbar";
 
 export default function header() {
   return (
     <header>
-      <div className="py-4">
+      <Topbar />
+      <div className="py-6">
         <div className="container">
           <div className="flex items-center justify-between">
             <div className="flex flex-1 items-center justify-between gap-4">
               <Image src="/images/logos/gotex-show-horizontal.svg" alt="Logo" width={108} height={42} />
               <nav className="hidden lg:block">
-                <ul className="flex items-center gap-6">
+                <ul className="flex items-center gap-4">
                   <li>
                     <Button size="sm" variant="subtle" asChild>
                       <Link href="/">Quero visitar</Link>
@@ -37,7 +39,7 @@ export default function header() {
                 </ul>
               </nav>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="ml-6 flex items-center gap-6">
               <Menu className="text-default" />
             </div>
           </div>
