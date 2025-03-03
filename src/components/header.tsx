@@ -13,7 +13,10 @@ export default function header() {
         <div className="container">
           <div className="flex items-center justify-between">
             <div className="flex flex-1 items-center justify-between gap-4">
-              <Image src="/images/logos/gotex-show-horizontal.svg" alt="Logo" width={108} height={42} />
+              <Link href="/">
+                <Image src="/images/logos/gotex-show-horizontal.svg" alt="Logo" width={120} height={46} />
+                <span className="sr-only">Página inicial</span>
+              </Link>
               <nav className="hidden lg:block">
                 <ul className="flex items-center gap-4">
                   <li>
