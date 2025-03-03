@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import { Button } from "@/components/button";
 import { IconList } from "@/components/icon-list";
-import { CheckCircle } from "lucide-react";
+import { Calendar, CheckCircle, Users } from "lucide-react";
+import ColoredLine from "@/components/colored-line";
 
 export default function Home() {
   return (
@@ -17,13 +18,13 @@ export default function Home() {
               </h1>
               <p>A Gotex Show reúne compradores, lojistas, confeccionistas e importadores do Brasil e do exterior em busca das últimas tendências e inovações da indústria têxtil.</p>
               <IconList className="space-y-2">
-                <IconList.Item icon={CheckCircle}>
+                <IconList.Item icon={CheckCircle} classname="icon-brand">
                   <strong className="text-default">+5.000 visitantes qualificados</strong> em busca de fornecedores e parceiros
                 </IconList.Item>
-                <IconList.Item icon={CheckCircle}>
+                <IconList.Item icon={CheckCircle} classname="icon-brand">
                   <strong className="text-default">Mais de 150 expositores</strong> nacionais e internacionais
                 </IconList.Item>
-                <IconList.Item icon={CheckCircle}>
+                <IconList.Item icon={CheckCircle} classname="icon-brand">
                   Oportunidades de <strong className="text-default">networking e negócios globais</strong>
                 </IconList.Item>
               </IconList>
@@ -38,6 +39,31 @@ export default function Home() {
             </div>
             <div className="p-10 pb-0 md:col-span-6 lg:col-span-5">
               <Image src="/images/seja-um-expositor/seja-um-expositor.webp" alt="Pessoas no evento da Gotex Show" width={370} height={414} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="container">
+          <div className="grid grid-cols-8">
+            <div className="md:col-span-4 lg:col-span-5">[FORM]</div>
+            <div className="md:col-span-4 lg:col-span-3">
+              <div className="bg-brand-secondary text-on-brand-secondary overflow-hidden rounded-lg">
+                <ColoredLine />
+                <div className="space-y-6 p-10">
+                  <h2 className="text-3xl font-semibold">Gotex Show - 12ª edição</h2>
+                  <p>Encontro Internacional Têxtil, de Moda e Negócios</p>
+                  <IconList>
+                    <IconList.Item icon={Users}>Evento presencial</IconList.Item>
+                    <IconList.Item icon={Calendar}>05 a 07 de agosto de 2025</IconList.Item>
+                  </IconList>
+                  {/* <ul>
+                    <li>Evento presencial</li>
+                    <li>05 a 07 de agosto de 2025</li>
+                  </ul> */}
+                </div>
+              </div>
             </div>
           </div>
         </div>

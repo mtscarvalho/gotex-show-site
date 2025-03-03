@@ -9,7 +9,7 @@ type IconListProps = {
 
 type IconListItemProps = {
   icon: LucideIcon;
-  color?: string;
+  classname?: string;
   children: React.ReactNode;
 };
 
@@ -17,10 +17,10 @@ export function IconList({ children, className }: IconListProps) {
   return <ul className={cn("space-y-2", className)}>{children}</ul>;
 }
 
-export function IconListItem({ icon: Icon, color = "icon-brand", children }: IconListItemProps) {
+export function IconListItem({ icon: Icon, classname, children }: IconListItemProps) {
   return (
     <li className="flex items-start gap-2">
-      <Icon className={cn("block w-5 shrink-0", color)} />
+      <Icon className={cn("block w-5 shrink-0", classname)} />
       <p>{children}</p>
     </li>
   );

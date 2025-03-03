@@ -2,7 +2,7 @@ import React from "react";
 import { tv, VariantProps } from "tailwind-variants";
 import { Slot } from "@radix-ui/react-slot";
 
-const buttonLero = tv({
+const buttonVariants = tv({
   base: "inline-flex gap-2 items-center justify-center transition-colors duration-300 cursor-pointer rounded-full text-sm",
   variants: {
     size: {
@@ -22,12 +22,12 @@ const buttonLero = tv({
 });
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonLero> & {
+  VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
   };
 
 function Button({ className, variant, size, asChild = false, ...props }: ButtonProps, ref: React.Ref<HTMLButtonElement>) {
-  const classes = buttonLero({ size, variant, className });
+  const classes = buttonVariants({ size, variant, className });
   const Comp = asChild ? Slot : "button";
 
   return <Comp className={classes} ref={ref} {...props} />;
