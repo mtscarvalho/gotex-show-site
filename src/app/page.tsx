@@ -7,11 +7,11 @@ import { CheckCircle } from "lucide-react";
 export default function Home() {
   return (
     <main>
-      <section className="relative pt-40">
-        <Image className="absolute top-0 -z-10 h-1/2 w-full object-cover" src="/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
+      <section className="relative md:pt-40">
+        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
         <div className="container">
-          <div className="bg-default border-default grid items-end rounded border shadow md:grid-cols-12">
-            <div className="space-y-4 p-10 md:col-span-6 lg:col-span-7">
+          <div className="md:bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
+            <div className="space-y-4 pt-10 md:col-span-6 md:p-10 lg:col-span-7">
               <h1 className="text-default text-4xl font-medium">
                 <span className="text-brand">Seja um expositor</span> no maior evento têxtil do Brasil!
               </h1>
@@ -27,7 +27,7 @@ export default function Home() {
                   Oportunidades de <strong className="text-default">networking e negócios globais</strong>
                 </IconList.Item>
               </IconList>
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-4">
                 <Button size="md" variant="primary">
                   Quero ser expositor
                 </Button>
