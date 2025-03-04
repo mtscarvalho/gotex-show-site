@@ -2,8 +2,9 @@ import Image from "next/image";
 
 import { Button } from "@/components/button";
 import { IconList } from "@/components/icon-list";
-import { Calendar, CheckCircle, Users } from "lucide-react";
+import { Calendar, CheckCircle, Clock, MapPin, Rocket, RocketIcon, Users } from "lucide-react";
 import ColoredLine from "@/components/colored-line";
+import Card from "@/components/card-icon";
 
 export default function Home() {
   return (
@@ -57,14 +58,63 @@ export default function Home() {
                   <IconList>
                     <IconList.Item icon={Users}>Evento presencial</IconList.Item>
                     <IconList.Item icon={Calendar}>05 a 07 de agosto de 2025</IconList.Item>
+                    <IconList.Item icon={MapPin}>Distrito Anhembi, Expo 2, Avenida Olavo Fontoura, 1209  –  Santana, São Paulo/SP - 02012-021</IconList.Item>
+                    <IconList.Item icon={Clock}> 05 e 06/08: 10h às 18h <br /> 07/08: 10h às 17h</IconList.Item>
                   </IconList>
-                  {/* <ul>
-                    <li>Evento presencial</li>
-                    <li>05 a 07 de agosto de 2025</li>
-                  </ul> */}
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="container grid gap-y-12">
+          <div className="space-y-4 text-center">
+            <span className="uppercase text-brand">Benefícios</span>
+            <h2 className="text-3xl font-bold text-default text-balance"><span className="text-brand">Por que participar</span> do Encontro Internacional Têxtil, de Moda e Negócios?</h2>
+          </div>
+          <div className="space-y-6">
+          <div className="grid grid-cols-4 gap-x-4">
+            <Card
+              icon={<Rocket />}
+              title="Lançamento de produtos"
+              description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+            />
+            <Card
+              icon={<Rocket />}
+              title="Lançamento de produtos"
+              description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+            />
+            <Card
+              icon={<Rocket />}
+              title="Lançamento de produtos"
+              description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+            />
+            <Card
+              icon={<Rocket />}
+              title="Lançamento de produtos"
+              description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-x-4">
+              <Card
+                icon={<Rocket />}
+                title="Lançamento de produtos"
+                description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+              />
+              <Card
+                icon={<Rocket />}
+                title="Lançamento de produtos"
+                description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+              />
+              <Card
+                icon={<Rocket />}
+                title="Lançamento de produtos"
+                description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor."
+              />
+          </div>
+          <p className="text-right">*Número de visitantes esperado na Gotex Show 2025 com base no público da última edição.</p>
           </div>
         </div>
       </section>
