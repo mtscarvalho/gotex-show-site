@@ -6,8 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:types": "payload generate:types"
   },
+  "type": "module",
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "dependencies": {
     "@payloadcms/db-postgres": "^3.25.0",
     "@payloadcms/next": "^3.25.0",
