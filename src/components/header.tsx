@@ -18,7 +18,7 @@ export default function header() {
                 <span className="sr-only">Página inicial</span>
               </Link>
               <nav className="hidden lg:block">
-                <ul className="flex items-center gap-4">
+                <ul className="flex items-center gap-2">
                   <li>
                     <Button size="sm" variant="subtle" asChild>
                       <Link href="/">Quero visitar</Link>
@@ -29,12 +29,12 @@ export default function header() {
                       <Link href="/">Quero expor</Link>
                     </Button>
                   </li>
-                  <li>
+                  <li className="ml-2">
                     <Button size="sm" variant="outline" asChild>
                       <Link href="/">Área restrita do expositor</Link>
                     </Button>
                   </li>
-                  <li>
+                  <li className="ml-2">
                     <Button size="sm" variant="primary" asChild>
                       <Link href="/">Inscreva-se gratuitamente</Link>
                     </Button>
