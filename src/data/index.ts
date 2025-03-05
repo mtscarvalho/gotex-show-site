@@ -4,13 +4,20 @@ import { getPayload } from "payload";
 
 const payload = await getPayload({ config });
 
-export const press = payload.find({
-  collection: "press",
-});
-
-export const fetchPress = async (): Promise<Partial<Press>[]> => {
-  const data = await payload.find({
+export const fetchPress = async (): Promise<Record<string, Partial<Press>[]>> => {
+  const { docs } = await payload.find({
     collection: "press",
+    sort: "-edition",
   });
-  return data.docs;
+
+  // Group by edition
+  return docs.reduce(
+    (acc, item) => {
+      if (!item.edition) return acc;
+      if (!acc[item.edition]) acc[item.edition] = [];
+      acc[item.edition].push(item);
+      return acc;
+    },
+    {} as Record<string, Partial<Press>[]>,
+  );
 };
