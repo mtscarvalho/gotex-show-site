@@ -152,6 +152,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-24 bg-brand-primary text-on-brand">
+        <div className="container text-center space-y-8">
+          <h2 className="font-medium text-5xl">Impulsione suas vendas e expanda seu negócio. Seja um expositor!</h2>
+          <a href="">Quero expor</a>
+        </div>
+      </section>
     </main>
   );
 }
