@@ -2,9 +2,9 @@ import Image from "next/image";
 
 import { Button } from "@/components/button";
 import { IconList } from "@/components/icon-list";
-import { Calendar, CheckCircle, Clock, MapPin, Rocket, Users } from "lucide-react";
+import { Calendar, CheckCircle, CircleDollarSign, Clock, Eye, Handshake, MapPin, MicVocal, Rocket, Star, User, Users } from "lucide-react";
 import ColoredLine from "@/components/colored-line";
-import Card from "@/components/card-icon";
+import CardIcon from "@/components/card-icon";
 import { Input } from "@/components/input";
 import { Textarea } from "@/components/textarea";
 
@@ -90,26 +90,65 @@ export default function Home() {
       </section>
 
       <section className="py-24">
-        <div className="container grid gap-y-12">
-          <div className="space-y-4 text-center">
+        <div className="grid gap-y-12">
+          <div className="space-y-4 container text-center">
             <span className="text-brand uppercase">Benefícios</span>
             <h2 className="text-default text-3xl font-bold text-balance">
               <span className="text-brand">Por que participar</span> do Encontro Internacional Têxtil, de Moda e Negócios?
             </h2>
           </div>
-          <div className="space-y-6">
-            <div className="grid grid-cols-4 gap-x-4">
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
+          <div className="container max-w-[78rem]">
+            <div className="flex gap-4 flex-wrap justify-center">
+              <img src="/images/seja-um-expositor/flag-bangladesh.svg" alt="Bandeira Bangladesh" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-bolivia.svg" alt="Bandeira Bolivia" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-brazil.svg" alt="Bandeira Brasil" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-china.svg" alt="Bandeira China" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-egypt.svg" alt="Bandeira Egito" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-usa.svg" alt="Bandeira estadoos Unidos da America" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-italy.svg" alt="Bandeira Italia" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-india.svg" alt="Bandeira India" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-mexico.svg" alt="Bandeira Mexico" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-coreia.svg" alt="Bandeira Coreia" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-peru.svg" alt="Bandeira Peru" width={83} height={40} loading="lazy" />
+              <img src="/images/seja-um-expositor/flag-turkey.svg" alt="Bandeira Turquia" width={83} height={40} loading="lazy" />
             </div>
-            <div className="grid grid-cols-3 gap-x-4">
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
-              <Card icon={<Rocket />} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
-            </div>
+          </div>
+          <div className="space-y-6 container">
+            <ul className="grid md:grid-cols-2 lg:grid-cols-12 gap-4">
+              <li className="lg:col-span-3 flex items-stretch"><CardIcon icon={Rocket} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." /></li>
+              <li className="lg:col-span-3 flex items-stretch"><CardIcon icon={User} title="Prospecção e geração de leads" description="Colete contatos valiosos e leads qualificados que podem se transformar em futuras vendas." /></li>
+              <li className="lg:col-span-3 flex items-stretch"><CardIcon icon={CircleDollarSign} title="Promoções e ofertas" description="Aproveite para oferecer promoções exclusivas e atrair mais visitantes ao seu estande." /></li>
+              <li className="lg:col-span-3 flex items-stretch"><CardIcon icon={Eye} title="Grande visibilidade" description="Alcance mais de 5.000 visitantes*, além de poder aparecer nos veículos de imprensa que cobrem o evento." /></li>
+              <li className="lg:col-span-4 flex items-stretch"><CardIcon icon={Star} title="Business Lounge exclusivo" description="Além do espaço para negociação, você também terá acesso a assessoria e consultoria técnica em comércio exterior." /></li>
+              <li className="lg:col-span-4 flex items-stretch"><CardIcon icon={Handshake} title="Networking e parcerias" description="Você terá contato direto com administradores e decisores de empresas têxteis nacionais e internacionais." /></li>
+              <li className="md:col-span-2 lg:flex items-stretch lg:col-span-4"><CardIcon icon={MicVocal} title="Serviço gratuito de intérpretes" description="Ofereceremos o serviço gratuito de intérpretes durante os três dias de evento." /></li>
+            </ul>
             <p className="text-right">*Número de visitantes esperado na Gotex Show 2025 com base no público da última edição.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 overflow-hidden">
+        <div className="container">
+          <div className="grid md:grid-cols-2 items-center gap-16">
+            <div className="space-y-6">
+              <div className="space-y-2.5">
+                <span className="text-brand uppercase tracking-[0.2em]">Público</span>
+                <h2 className="text-default text-3xl font-semibold">Perfil dos visitantes</h2>
+              </div>
+              <p>A Gotex Show atrai um público qualificado do setor têxtil, incluindo empresários, varejistas, atacadistas, e-commerce e indústrias.</p>
+              <p>Com visitantes nacionais e internacionais, o evento reúne decisores e influenciadores do mercado e seus principais interesses são tecidos, vestuário, moda praia, acessórios e aviamentos.</p>
+              <div>
+                <a href="">Quero expor</a>
+                <a href="">Perfil completo dos visitantes</a>
+              </div>
+            </div>
+            <div>
+              <div className="relative z-0">
+                <img className="m-auto" src="/images/seja-um-expositor/perfil-dos-visitantes.webp" alt="Mosaico de fotos sobre o publico dentro do evento da Gotex" width={518} height={475} loading="lazy" />
+                <img className="absolute scale-110 top-1 -right-7 -z-10" src="/images/seja-um-expositor/perfil-dos-visitantes.svg" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

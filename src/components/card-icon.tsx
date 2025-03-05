@@ -1,17 +1,18 @@
+import { LucideIcon } from 'lucide-react';
 import React from 'react'
 
-interface CardProps {
-  icon: React.ReactNode;
+type CardIconProps = {
+  icon: LucideIcon;
   title: string;
   description: string;
 }
 
-export default function Card({ icon, title, description }: CardProps) {
+export default function CardIcon({ icon: Icon, title, description }: CardIconProps) {
   return (
-    <div className="flex flex-col items-start gap-2 rounded-2xl border border-brand p-6">
-      <div>{icon}</div>
-      <h3 className="text-lg font-bold text-gray-900">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="flex flex-col text-default bg-tertiary items-start gap-2 rounded-2xl border border-default-tertiary p-6">
+      <Icon className='icon-brand size-10'/>
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p>{description}</p>
     </div>
   );
 }
