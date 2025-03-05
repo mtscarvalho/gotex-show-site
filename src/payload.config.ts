@@ -1,14 +1,19 @@
-// storage-adapter-import-placeholder
-import { postgresAdapter } from "@payloadcms/db-postgres";
-import { payloadCloudPlugin } from "@payloadcms/payload-cloud";
-import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import path from "path";
-import { buildConfig } from "payload";
-import { fileURLToPath } from "url";
 import sharp from "sharp";
+import { fileURLToPath } from "url";
+
+import { buildConfig } from "payload";
+import { BlocksFeature, lexicalEditor } from "@payloadcms/richtext-lexical";
+import { payloadCloudPlugin } from "@payloadcms/payload-cloud";
+import { postgresAdapter } from "@payloadcms/db-postgres";
+import { seoPlugin } from "@payloadcms/plugin-seo";
+
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
 import { Press } from "./collections/Press";
+import { Posts } from "./collections/Posts";
+
+import { YouTubeEmbedBlock } from "./blocks/YouTubeEmbedBlock";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -20,7 +25,15 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Press],
+  collections: [Users, Media, Press, Posts],
+  editor: lexicalEditor({
+    features: ({ defaultFeatures }) => [
+      ...defaultFeatures,
+      BlocksFeature({
+        blocks: [YouTubeEmbedBlock],
+      }),
+    ],
+  }),
   localization: {
     locales: [
       {
@@ -35,7 +48,6 @@ export default buildConfig({
     defaultLocale: "pt-br",
     fallback: true,
   },
-  editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
@@ -48,6 +60,11 @@ export default buildConfig({
   sharp,
   plugins: [
     payloadCloudPlugin(),
-    // storage-adapter-placeholder
+    seoPlugin({
+      collections: ["posts"],
+      generateTitle: ({ doc }) => `${doc.title} | Gotex Show`,
+      generateDescription: ({ doc }) => `${doc.content.root.children[0].children[0].text.split(/\s+/).slice(0, 20).join(" ")}... Leia mais!`,
+      generateURL: ({ doc }) => `${process.env.SITE_URL}/noticias/${doc?.slug}`,
+    }),
   ],
 });

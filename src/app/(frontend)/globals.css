@@ -438,4 +438,15 @@
  */
 
 @layer components {
+  .text-overline {
+    @apply leading-tight tracking-[0.16em] uppercase;
+  }
+
+  /*  */
+  /*  */
+  /*  */
+
+  .rich-text > div {
+    @apply space-y-4;
+  }
 }

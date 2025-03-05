@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "gotex-show",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,16 +14,17 @@
     ".next/cache"
   ],
   "dependencies": {
-    "@payloadcms/db-postgres": "^3.25.0",
-    "@payloadcms/next": "^3.25.0",
-    "@payloadcms/payload-cloud": "^3.25.0",
-    "@payloadcms/richtext-lexical": "^3.25.0",
+    "payload": "latest",
+    "@payloadcms/db-postgres": "latest",
+    "@payloadcms/next": "latest",
+    "@payloadcms/payload-cloud": "latest",
+    "@payloadcms/plugin-seo": "latest",
+    "@payloadcms/richtext-lexical": "^3.19.0",
     "@radix-ui/react-slot": "^1.1.2",
     "clsx": "^2.1.1",
     "graphql": "^16.10.0",
     "lucide-react": "^0.477.0",
     "next": "15.2.0",
-    "payload": "^3.25.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.5",
