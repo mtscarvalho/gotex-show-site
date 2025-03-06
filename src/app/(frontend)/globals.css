@@ -435,7 +435,7 @@
  * ==============================================
  * Components Layer
  * ==============================================
- */
+*/
 
 @layer components {
   .text-overline {
@@ -446,7 +446,16 @@
   /*  */
   /*  */
 
-  .rich-text > div {
-    @apply space-y-4;
+  .payload-richtext {
+    @apply flex flex-col gap-4;
+  }
+
+  .payload-richtext blockquote,
+  .payload-richtext iframe {
+    @apply my-4;
+  }
+
+  .payload-richtext blockquote {
+    @apply border-brand border-l-4 p-4 italic;
   }
 }

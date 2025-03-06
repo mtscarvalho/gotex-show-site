@@ -18,9 +18,5 @@ export function RichText({ data }: RichTextProps) {
     },
   });
 
-  return (
-    <div>
-      <RichTextWithoutBlocks converters={jsxConverters} data={data} />
-    </div>
-  );
+  return <RichTextWithoutBlocks converters={jsxConverters} data={data} />;
 }
