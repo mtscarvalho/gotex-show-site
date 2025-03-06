@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { fetchPost } from "@/data";
 import { notFound } from "next/navigation";
 import { RichText } from "@/components/rich-text";
@@ -39,27 +37,27 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <p className="text-overline text-default">Compartilhar</p>
               <ul className="flex gap-4 lg:flex-col">
                 <li>
-                  <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(event.permalink)}`} target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(!event.permalink)}`} target="_blank" rel="noopener noreferrer">
                     <LinkedIn className="text-default size-8" />
                   </Link>
                 </li>
                 <li>
-                  <Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(event.permalink)}`} target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(!event.permalink)}`} target="_blank" rel="noopener noreferrer">
                     <Facebook className="text-default size-8" />
                   </Link>
                 </li>
                 <li>
-                  <Link href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(event.permalink)}&text=${encodeURIComponent(event.title)}`} target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(!event.permalink)}&text=${encodeURIComponent(event.title)}`} target="_blank" rel="noopener noreferrer">
                     <X className="text-default size-8" />
                   </Link>
                 </li>
                 <li>
-                  <Link href={`https://www.threads.net/intent/post?text=${encodeURIComponent(event.title + " " + event.permalink)}`} target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://www.threads.net/intent/post?text=${encodeURIComponent(event.title + " " + !event.permalink)}`} target="_blank" rel="noopener noreferrer">
                     <Threads className="text-default size-8" />
                   </Link>
                 </li>
                 <li>
-                  <Link href={`https://api.whatsapp.com/send?text=${encodeURIComponent(event.title + " " + event.permalink)}`} target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://api.whatsapp.com/send?text=${encodeURIComponent(event.title + " " + !event.permalink)}`} target="_blank" rel="noopener noreferrer">
                     <WhatsApp className="text-default size-8" />
                   </Link>
                 </li>
