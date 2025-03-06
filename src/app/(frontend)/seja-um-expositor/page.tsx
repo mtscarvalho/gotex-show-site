@@ -178,6 +178,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-24 relative">
+        <div className="container">
+          <div className="grid md:grid-cols-2  gap-x-16 gap-y-6">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-semibold text-default">Faça negócios de sucesso no 12ª Encontro Internacional Têxtil de Moda e Negócios!</h2>
+              <a href="">Quero expor</a>
+              <a href="">Inscreva-se gratuitamente</a>
+            </div>
+            <div>
+              <IconList>
+                <IconList.Item classname="icon-brand" icon={Users}>Evento presencial</IconList.Item>
+                <IconList.Item classname="icon-brand" icon={Calendar}>05 a 07 de agosto de 2025</IconList.Item>
+                <IconList.Item classname="icon-brand" icon={MapPin}>Distrito Anhembi, Expo 2, Avenida Olavo Fontoura, 1209 – Santana, São Paulo/SP - 02012-021</IconList.Item>
+                <IconList.Item classname="icon-brand" icon={Clock}>
+                  {" "}
+                  05 e 06/08: 10h às 18h <br /> 07/08: 10h às 17h
+                </IconList.Item>
+              </IconList>
+              <div className="absolute bottom-0 left-0 right-0">
+                <ColoredLine size="lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
