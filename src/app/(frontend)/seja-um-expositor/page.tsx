@@ -8,11 +8,15 @@ import CardIcon from "@/components/card-icon";
 import { Input } from "@/components/input";
 import { Textarea } from "@/components/textarea";
 import Link from "next/link";
+import { Buttons } from "@/components/buttons";
+import EventAttributes from "@/components/event-attributes";
+import Partners from "@/components/partners";
+import CallToAction from "@/components/call-to-action";
 
 export default function Home() {
   return (
     <main>
-      <section className="relative md:pt-40">
+      <section className="bg-secondary relative z-0 md:pt-40">
         <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
         <div className="container">
           <div className="md:bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
@@ -32,14 +36,14 @@ export default function Home() {
                   Oportunidades de <strong className="text-default">networking e negócios globais</strong>
                 </IconList.Item>
               </IconList>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="md" variant="primary">
-                  Quero ser expositor
+              <Buttons>
+                <Button size="md" variant="primary" asChild>
+                  <Link href="/">Quero ser expositor</Link>
                 </Button>
-                <Button size="md" variant="outline">
-                  Ver opções de patrocínio
+                <Button size="md" variant="outline" asChild>
+                  <Link href="/"> Ver opções de patrocínio</Link>
                 </Button>
-              </div>
+              </Buttons>
             </div>
             <div className="p-10 pb-0 md:col-span-6 lg:col-span-5">
               <Image src="/images/seja-um-expositor/seja-um-expositor.webp" alt="Pessoas no evento da Gotex Show" width={370} height={414} />
@@ -48,10 +52,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="bg-secondary py-24">
         <div className="container">
           <div className="grid gap-16 lg:grid-cols-8">
-            <div className="md:col-span-4 lg:col-span-5">
+            <div className="space-y-10 md:col-span-4 lg:col-span-5">
+              <div className="space-y-2">
+                <h2 className="text-overline text-brand-secondary">Contato</h2>
+                <p className="text-default text-3xl font-semibold text-balance">
+                  Fale com um de nossos consultores e <strong className="text-brand-secondary">reserve o seu estande</strong>
+                </p>
+              </div>
               <form className="grid gap-4 md:grid-cols-2" action="">
                 <Input label="Nome" name="name" type="text" placeholder="Seu nome" required />
                 <Input label="E-mail" name="email" type="email" placeholder="Seu e-mail" required />
@@ -74,15 +84,7 @@ export default function Home() {
                 <div className="space-y-6 p-10">
                   <h2 className="text-3xl font-semibold">Gotex Show - 12ª edição</h2>
                   <p>Encontro Internacional Têxtil, de Moda e Negócios</p>
-                  <IconList>
-                    <IconList.Item icon={Users}>Evento presencial</IconList.Item>
-                    <IconList.Item icon={Calendar}>05 a 07 de agosto de 2025</IconList.Item>
-                    <IconList.Item icon={MapPin}>Distrito Anhembi, Expo 2, Avenida Olavo Fontoura, 1209 – Santana, São Paulo/SP - 02012-021</IconList.Item>
-                    <IconList.Item icon={Clock}>
-                      {" "}
-                      05 e 06/08: 10h às 18h <br /> 07/08: 10h às 17h
-                    </IconList.Item>
-                  </IconList>
+                  <EventAttributes />
                 </div>
               </div>
             </div>
@@ -91,14 +93,14 @@ export default function Home() {
       </section>
 
       <section className="py-24">
-        <div className="grid gap-y-12">
-          <div className="container space-y-4 text-center">
-            <span className="text-brand uppercase">Benefícios</span>
-            <h2 className="text-default text-3xl font-bold text-balance">
+        <div className="flex flex-col gap-y-12">
+          <div className="container space-y-2 text-center">
+            <h2 className="text-brand text-overline">Benefícios</h2>
+            <p className="text-default text-3xl font-semibold text-balance">
               <span className="text-brand">Por que participar</span> do Encontro Internacional Têxtil, de Moda e Negócios?
-            </h2>
+            </p>
           </div>
-          <div className="container max-w-[78rem]">
+          <div className="container max-w-7xl">
             <div className="flex flex-wrap justify-center gap-4">
               <Image src="/images/seja-um-expositor/flag-bangladesh.svg" alt="Bandeira Bangladesh" width={83} height={40} loading="lazy" />
               <Image src="/images/seja-um-expositor/flag-bolivia.svg" alt="Bandeira Bolivia" width={83} height={40} loading="lazy" />
@@ -116,44 +118,44 @@ export default function Home() {
           </div>
           <div className="container space-y-6">
             <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-12">
-              <li className="flex items-stretch lg:col-span-3">
+              <li className="lg:col-span-3">
                 <CardIcon icon={Rocket} title="Lançamento de produtos" description="Evento ideal para lançar novos produtos e obter feedback direto dos consumidores e especialistas do setor." />
               </li>
-              <li className="flex items-stretch lg:col-span-3">
+              <li className="lg:col-span-3">
                 <CardIcon icon={User} title="Prospecção e geração de leads" description="Colete contatos valiosos e leads qualificados que podem se transformar em futuras vendas." />
               </li>
-              <li className="flex items-stretch lg:col-span-3">
+              <li className="lg:col-span-3">
                 <CardIcon icon={CircleDollarSign} title="Promoções e ofertas" description="Aproveite para oferecer promoções exclusivas e atrair mais visitantes ao seu estande." />
               </li>
-              <li className="flex items-stretch lg:col-span-3">
+              <li className="lg:col-span-3">
                 <CardIcon icon={Eye} title="Grande visibilidade" description="Alcance mais de 5.000 visitantes*, além de poder aparecer nos veículos de imprensa que cobrem o evento." />
               </li>
-              <li className="flex items-stretch lg:col-span-4">
+              <li className="lg:col-span-4">
                 <CardIcon icon={Star} title="Business Lounge exclusivo" description="Além do espaço para negociação, você também terá acesso a assessoria e consultoria técnica em comércio exterior." />
               </li>
-              <li className="flex items-stretch lg:col-span-4">
+              <li className="lg:col-span-4">
                 <CardIcon icon={Handshake} title="Networking e parcerias" description="Você terá contato direto com administradores e decisores de empresas têxteis nacionais e internacionais." />
               </li>
-              <li className="items-stretch md:col-span-2 lg:col-span-4 lg:flex">
+              <li className="md:col-span-2 lg:col-span-4">
                 <CardIcon icon={MicVocal} title="Serviço gratuito de intérpretes" description="Ofereceremos o serviço gratuito de intérpretes durante os três dias de evento." />
               </li>
             </ul>
-            <p className="text-right">*Número de visitantes esperado na Gotex Show 2025 com base no público da última edição.</p>
+            <p className="text-right text-sm">*Número de visitantes esperado na Gotex Show 2025 com base no público da última edição.</p>
           </div>
         </div>
       </section>
 
-      <section className="overflow-hidden py-24">
+      <section className="bg-secondary relative z-0 overflow-hidden py-24">
         <div className="container">
           <div className="grid items-center gap-16 md:grid-cols-2">
-            <div className="space-y-6">
-              <div className="space-y-2.5">
-                <span className="text-brand tracking-[0.2em] uppercase">Público</span>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <span className="text-brand text-overline">Público</span>
                 <h2 className="text-default text-3xl font-semibold">Perfil dos visitantes</h2>
               </div>
               <p>A Gotex Show atrai um público qualificado do setor têxtil, incluindo empresários, varejistas, atacadistas, e-commerce e indústrias.</p>
               <p>Com visitantes nacionais e internacionais, o evento reúne decisores e influenciadores do mercado e seus principais interesses são tecidos, vestuário, moda praia, acessórios e aviamentos.</p>
-              <div className="flex gap-4">
+              <Buttons>
                 <Button size="md" variant="primary" asChild>
                   <Link href="/">Quero expor</Link>
                 </Button>
@@ -163,75 +165,18 @@ export default function Home() {
                     Perfil completo dos visitantes
                   </Link>
                 </Button>
-              </div>
+              </Buttons>
             </div>
-            <div>
-              <div className="relative z-0">
-                <Image className="m-auto" src="/images/seja-um-expositor/perfil-dos-visitantes.webp" alt="Mosaico de fotos sobre o publico dentro do evento da Gotex" width={518} height={475} loading="lazy" />
-                {/* <Image className="absolute top-1 -right-7 -z-10 scale-110" src="/images/seja-um-expositor/perfil-dos-visitantes.svg" alt="" /> */}
-              </div>
+            <div className="relative">
+              <Image className="m-auto" src="/images/seja-um-expositor/perfil-dos-visitantes.webp" alt="Mosaico de fotos sobre o publico dentro do evento da Gotex" width={518} height={475} loading="lazy" />
+              <div className="absolute top-0 -z-10 h-[100%] w-[100%] scale-[500%] rotate-180 bg-[#60C8B3] md:origin-center md:rotate-0" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-brand-primary text-on-brand py-24">
-        <div className="container space-y-8 text-center">
-          <h2 className="text-5xl font-medium">Impulsione suas vendas e expanda seu negócio. Seja um expositor!</h2>
-          <a href="">Quero expor</a>
-        </div>
-      </section>
-
-      <section className="py-24">
-        <div className="container">
-          <div className="grid gap-y-10 text-center md:grid-cols-2">
-            <div>
-              <a href="https://www.8com.com.br/" title="Link para o site da organizadora OitoCom" target="_blank" rel="noopener noreferrer">
-                <span>Organizador</span>
-                <Image className="m-auto" src="/images/seja-um-expositor/logo-oitocom.webp" alt="Logo da organizadora OitoCom" width={133} height={133} loading="lazy" />
-              </a>
-            </div>
-            <div>
-              <a href="https://jogajunto.co/" title="Link para o site da agência oficial JogaJunto" target="_blank" rel="noopener noreferrer">
-                <span>Agência oficial</span>
-                <Image className="m-auto" src="/images/seja-um-expositor/logo-jogajunto.svg" alt="Logo da agência oficial JogaJunto" width={133} height={133} loading="lazy" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative py-24">
-        <div className="container">
-          <div className="grid gap-x-16 gap-y-6 md:grid-cols-2">
-            <div className="space-y-6">
-              <h2 className="text-default text-3xl font-semibold">Faça negócios de sucesso no 12ª Encontro Internacional Têxtil de Moda e Negócios!</h2>
-              <a href="">Quero expor</a>
-              <a href="">Inscreva-se gratuitamente</a>
-            </div>
-            <div>
-              <IconList>
-                <IconList.Item classname="icon-brand" icon={Users}>
-                  Evento presencial
-                </IconList.Item>
-                <IconList.Item classname="icon-brand" icon={Calendar}>
-                  05 a 07 de agosto de 2025
-                </IconList.Item>
-                <IconList.Item classname="icon-brand" icon={MapPin}>
-                  Distrito Anhembi, Expo 2, Avenida Olavo Fontoura, 1209 – Santana, São Paulo/SP - 02012-021
-                </IconList.Item>
-                <IconList.Item classname="icon-brand" icon={Clock}>
-                  {" "}
-                  05 e 06/08: 10h às 18h <br /> 07/08: 10h às 17h
-                </IconList.Item>
-              </IconList>
-              <div className="absolute right-0 bottom-0 left-0">
-                <ColoredLine size="lg" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CallToAction />
+      <Partners />
     </main>
   );
 }

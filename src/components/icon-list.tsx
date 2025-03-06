@@ -14,7 +14,7 @@ type IconListItemProps = {
 };
 
 export function IconList({ children, className }: IconListProps) {
-  return <ul className={cn("space-y-2", className)}>{children}</ul>;
+  return <ul className={cn("space-y-4", className)}>{children}</ul>;
 }
 
 export function IconListItem({ icon: Icon, classname, children }: IconListItemProps) {

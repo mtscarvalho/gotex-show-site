@@ -10,7 +10,7 @@ export function Input({ label, name, disabled, ...props }: InputProps) {
       <label className={disabled ? "text-disabled" : "text-default"} htmlFor={name}>
         {label}
       </label>
-      <input className="text-default border-default placeholder:text-default-tertiary disabled:bg-disabled disabled:border-disabled disabled:text-on-disabled disabled:placeholder:text-on-disabled flex h-10 w-full items-center rounded-lg border px-4" id={name} name={name} {...props} disabled={disabled} />
+      <input className="bg-default text-default border-default placeholder:text-default-tertiary disabled:bg-disabled disabled:border-disabled disabled:text-on-disabled disabled:placeholder:text-on-disabled flex h-10 w-full items-center rounded-lg border px-4" id={name} name={name} {...props} disabled={disabled} />
     </div>
   );
 }
