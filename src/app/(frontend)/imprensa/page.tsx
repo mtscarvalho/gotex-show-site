@@ -1,4 +1,4 @@
-import { fetchPress } from "@/data";
+import { fetchPress } from "@/data/payload";
 
 export async function generateMetadata() {
   return {

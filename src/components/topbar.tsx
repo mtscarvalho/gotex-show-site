@@ -1,5 +1,4 @@
-import React from "react";
-import { Countdown } from "./countdown";
+import { Countdown } from "@/components/countdown";
 
 export function Topbar() {
   return (

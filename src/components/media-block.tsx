@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { Media } from "@/payload-types";
 
 export type MediaBlockProps = {

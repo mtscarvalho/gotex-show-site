@@ -1,6 +1,6 @@
-import React from "react";
 import { tv, VariantProps } from "tailwind-variants";
 import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@/lib/utils";
 
 const buttonVariants = tv({
   base: "inline-flex gap-2 items-center justify-center transition-colors duration-300 cursor-pointer rounded-full text-sm",
@@ -21,6 +21,11 @@ const buttonVariants = tv({
   },
 });
 
+type ButtonsProps = {
+  classname?: string;
+  children: React.ReactNode;
+};
+
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
@@ -33,6 +38,10 @@ function Button({ className, variant, size, asChild = false, ...props }: ButtonP
   return <Comp className={classes} ref={ref} {...props} />;
 }
 
+function Buttons({ classname, children }: ButtonsProps) {
+  return <div className={cn("flex flex-wrap gap-4 pt-4", classname)}>{children}</div>;
+}
+
 const ForwardedButton = React.forwardRef(Button);
 
-export { ForwardedButton as Button };
+export { ForwardedButton as Button, Buttons };

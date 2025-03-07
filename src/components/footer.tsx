@@ -1,12 +1,9 @@
-import React from "react";
-import { Button } from "./button";
 import Link from "next/link";
 import Image from "next/image";
-import ColoredLine from "./colored-line";
-import { Buttons } from "./buttons";
-import { IconList } from "./icon-list";
-import { Calendar, Clock, MapPin, Users } from "lucide-react";
-import EventAttributes from "./event-attributes";
+
+import { Button, Buttons } from "@/components/button";
+import { ColoredLine } from "@/components/colored-line";
+import { EventAttributes } from "@/components/event-attributes";
 
 export function Footer() {
   const menu = [

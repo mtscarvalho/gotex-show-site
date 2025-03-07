@@ -1,11 +1,9 @@
 import { DefaultNodeTypes, SerializedBlockNode } from "@payloadcms/richtext-lexical";
 import { SerializedEditorState } from "node_modules/lexical/LexicalEditorState";
-
 import { JSXConvertersFunction, RichText as ConvertRichText } from "@payloadcms/richtext-lexical/react";
 
 import { YouTubeEmbed, YouTubeEmbedProps } from "@/components/youtube-embed";
-
-import { MediaBlock, MediaBlockProps } from "./media-block";
+import { MediaBlock, MediaBlockProps } from "@/components/media-block";
 
 type RichTextProps = {
   data: SerializedEditorState;

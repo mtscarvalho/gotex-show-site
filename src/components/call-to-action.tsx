@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Button } from "./button";
 
-export default function CallToAction() {
+import { Button } from "@/components/button";
+
+export function CallToAction() {
   return (
     <section className="bg-brand-primary text-on-brand py-24">
       <div className="container space-y-8 text-center">

@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React from "react";
 
-export default function Partners() {
+export function Partners() {
   return (
     <section className="pt-24">
       <div className="container">

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/button";
 import { IconList } from "@/components/icon-list";
 import { Calendar, CheckCircle, Clock, MapPin, Rocket, Users } from "lucide-react";
-import ColoredLine from "@/components/colored-line";
+import { ColoredLine } from "@/components/colored-line";
 import Card from "@/components/card-icon";
 import { Input } from "@/components/input";
 import { Textarea } from "@/components/textarea";

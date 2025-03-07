@@ -1,17 +1,17 @@
 import Image from "next/image";
-
-import { Button } from "@/components/button";
-import { IconList } from "@/components/icon-list";
-import { Calendar, CheckCircle, CircleDollarSign, Clock, Download, Eye, Handshake, MapPin, MicVocal, Rocket, Star, User, Users } from "lucide-react";
-import ColoredLine from "@/components/colored-line";
-import CardIcon from "@/components/card-icon";
-import { Input } from "@/components/input";
-import { Textarea } from "@/components/textarea";
 import Link from "next/link";
-import { Buttons } from "@/components/buttons";
-import EventAttributes from "@/components/event-attributes";
-import Partners from "@/components/partners";
-import CallToAction from "@/components/call-to-action";
+
+import { CheckCircle, CircleDollarSign, Download, Eye, Handshake, MicVocal, Rocket, Star, User } from "lucide-react";
+
+import { Button, Buttons } from "@/components/button";
+import { CallToAction } from "@/components/call-to-action";
+import { CardIcon } from "@/components/card-icon";
+import { ColoredLine } from "@/components/colored-line";
+import { EventAttributes } from "@/components/event-attributes";
+import { IconList } from "@/components/icon-list";
+import { Input } from "@/components/input";
+import { Partners } from "@/components/partners";
+import { Textarea } from "@/components/textarea";
 
 export default function Home() {
   return (

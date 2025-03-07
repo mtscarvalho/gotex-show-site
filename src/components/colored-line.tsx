@@ -1,10 +1,8 @@
-import React from "react";
-
 type ColoredLineProps = {
   size?: "sm" | "lg";
 };
 
-export default function ColoredLine({ size = "sm" }: ColoredLineProps) {
+export function ColoredLine({ size = "sm" }: ColoredLineProps) {
   return (
     <div className="flex w-full">
       <div className="bg-brand-tertiary h-2 w-full"></div>

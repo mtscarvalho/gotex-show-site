@@ -1,8 +1,9 @@
-import { fetchPost } from "@/data";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+
+import { fetchPost } from "@/data/payload";
 import { RichText } from "@/components/rich-text";
 
-import Link from "next/link";
 import { Facebook, LinkedIn, Threads, WhatsApp, X } from "@/components/icons";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

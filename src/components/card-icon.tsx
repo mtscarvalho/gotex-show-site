@@ -1,5 +1,4 @@
 import { LucideIcon } from "lucide-react";
-import React from "react";
 
 type CardIconProps = {
   icon: LucideIcon;
@@ -7,7 +6,7 @@ type CardIconProps = {
   description: string;
 };
 
-export default function CardIcon({ icon: Icon, title, description }: CardIconProps) {
+export function CardIcon({ icon: Icon, title, description }: CardIconProps) {
   return (
     <div className="text-default bg-tertiary border-default-tertiary flex h-full flex-col items-start gap-2 rounded-2xl border p-6">
       <Icon className="icon-brand size-10" />

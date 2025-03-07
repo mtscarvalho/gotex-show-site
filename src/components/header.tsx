@@ -1,9 +1,10 @@
 import Image from "next/image";
-import React from "react";
-import { Button } from "./button";
 import Link from "next/link";
+
 import { Menu } from "lucide-react";
-import { Topbar } from "./topbar";
+
+import { Button } from "@/components/button";
+import { Topbar } from "@/components/topbar";
 
 export default function header() {
   return (

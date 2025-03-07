@@ -1,13 +1,14 @@
-import React from "react";
-import { IconList } from "./icon-list";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
+
 import { cn } from "@/lib/utils";
+
+import { IconList } from "@/components/icon-list";
 
 type EventAttributesProps = {
   iconColor?: string;
 };
 
-export default function EventAttributes({ iconColor }: EventAttributesProps) {
+export function EventAttributes({ iconColor }: EventAttributesProps) {
   return (
     <IconList className="space-y-4">
       <IconList.Item classname={cn(iconColor)} icon={Users}>
