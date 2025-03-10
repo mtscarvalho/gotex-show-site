@@ -5,12 +5,13 @@ import { cn } from "@/lib/utils";
 import { IconList } from "@/components/icon-list";
 
 type EventAttributesProps = {
+  className?: string;
   iconColor?: string;
 };
 
-export function EventAttributes({ iconColor }: EventAttributesProps) {
+export function EventAttributes({ className, iconColor }: EventAttributesProps) {
   return (
-    <IconList className="space-y-4">
+    <IconList className={cn("space-y-4", className)}>
       <IconList.Item classname={cn(iconColor)} icon={Users}>
         Evento presencial aa
       </IconList.Item>

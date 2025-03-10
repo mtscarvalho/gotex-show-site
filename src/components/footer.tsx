@@ -52,7 +52,7 @@ export function Footer() {
                 </Button>
               </Buttons>
             </div>
-            <EventAttributes iconColor="icon-brand" />
+            <EventAttributes className="text-default" iconColor="icon-brand" />
           </div>
         </div>
       </section>
