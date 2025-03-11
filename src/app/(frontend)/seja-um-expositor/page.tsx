@@ -163,12 +163,12 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-[url('/images/seja-um-expositor/tipos-de-cotas.webp')] bg-cover bg-no-repeat py-24">
+      <section className="bg-[url('/images/bg-green-flying-fabric-right.webp')] bg-cover bg-no-repeat py-24">
         <div className="container flex flex-col gap-8">
           <div className="max-w-3xl space-y-4">
             <div className="space-y-2">
-              <span className="text-brand text-overline">Tipos de cotas</span>
-              <h2 className="text-default text-3xl font-semibold text-balance">Conheça as opções de patrocínio disponíveis</h2>
+              <h2 className="text-brand text-overline">Tipos de cotas</h2>
+              <p className="text-default text-3xl font-semibold text-balance">Conheça as opções de patrocínio disponíveis</p>
             </div>
             <p>Temos estandes disponíveis que vão de 9 m² até uma ilha completa de 72 m². Você pode escolher o tamanho ideal para sua empresa e também decidir qual das três opções de patrocínio prefere:</p>
           </div>
