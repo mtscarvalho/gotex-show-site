@@ -155,7 +155,7 @@ export default function Page() {
             </div>
             <div className="relative">
               <Image className="m-auto" src="/images/seja-um-expositor/perfil-dos-visitantes.webp" alt="Mosaico de fotos sobre o publico dentro do evento da Gotex" width={518} height={475} loading="lazy" />
-              <div className="absolute top-0 -z-10 h-[100%] w-[100%] scale-[500%] rotate-180 bg-[#60C8B3] md:origin-center md:rotate-0" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}></div>
+              <div className="absolute top-0 -z-10 h-[100%] w-[100%] scale-[500%] rotate-180 bg-[#60C8B3] [clip-path:polygon(0_0,100%_0,100%_100%)] md:origin-center md:rotate-0"></div>
             </div>
           </div>
         </div>
