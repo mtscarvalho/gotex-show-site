@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { CheckCircle, CircleDollarSign, Download, Eye, Handshake, MicVocal, Rocket, Star, User } from "lucide-react";
+import { CheckCircle, CircleDollarSign, CircleX, Download, Eye, Handshake, MicVocal, Rocket, Star, User } from "lucide-react";
 
 import { Button, Buttons } from "@/components/button";
 import { CallToAction } from "@/components/call-to-action";
@@ -10,8 +10,10 @@ import { ColoredLine } from "@/components/colored-line";
 import { EventAttributes } from "@/components/event-attributes";
 import { IconList } from "@/components/icon-list";
 import { Partners } from "@/components/partners";
+import Table from "@/components/table";
 
 import BeAnExhibitorForm from "@/components/be-an-exhibitor-form";
+import Testimonials from "@/components/testimonials";
 
 export default function Page() {
   return (
@@ -161,6 +163,162 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="bg-[url('/images/seja-um-expositor/tipos-de-cotas.webp')] bg-cover bg-no-repeat py-24">
+        <div className="container flex flex-col gap-8">
+          <div className="max-w-3xl space-y-4">
+            <div className="space-y-2">
+              <span className="text-brand text-overline">Tipos de cotas</span>
+              <h2 className="text-default text-3xl font-semibold text-balance">Conheça as opções de patrocínio disponíveis</h2>
+            </div>
+            <p>Temos estandes disponíveis que vão de 9 m² até uma ilha completa de 72 m². Você pode escolher o tamanho ideal para sua empresa e também decidir qual das três opções de patrocínio prefere:</p>
+          </div>
+          <Table>
+            <Table.Head>
+              <Table.Row>
+                <Table.Header>Tipo de patrocínio</Table.Header>
+                <Table.Header className="text-center">Malha</Table.Header>
+                <Table.Header className="text-center">Algodão</Table.Header>
+                <Table.Header className="text-center">Seda</Table.Header>
+              </Table.Row>
+            </Table.Head>
+            <tbody>
+              <Table.Row>
+                <Table.Cell>Logo na identidade visual do evento</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Ações de marketing nas redes sociais</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Inclusão de brindes no kit de boas-vindas dos participantes</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Destaque no Business Lounge</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Acesso VIP ao Business Lounge</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Destaque no palco das palestras</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Ações de marketing por e-mail</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Workshops no Business Lounge</Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Não</span>
+                  <CircleX className="icon-danger mx-auto" />
+                </Table.Cell>
+                <Table.Cell>
+                  <span className="sr-only">Sim</span>
+                  <CheckCircle className="icon-brand mx-auto" />
+                </Table.Cell>
+              </Table.Row>
+            </tbody>
+          </Table>
+          <Buttons>
+            <Button size="md" variant="primary" asChild>
+              <Link href="/">Quero expor</Link>
+            </Button>
+            <Button size="md" variant="outline" asChild>
+              <Link href="/">
+                <Download className="size-4" />
+                Detalhes dos estandes
+              </Link>
+            </Button>
+          </Buttons>
+        </div>
+      </section>
+
+      <Testimonials />
       <CallToAction />
       <Partners />
     </main>
