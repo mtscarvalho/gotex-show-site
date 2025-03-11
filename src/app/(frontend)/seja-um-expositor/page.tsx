@@ -9,11 +9,11 @@ import { CardIcon } from "@/components/card-icon";
 import { ColoredLine } from "@/components/colored-line";
 import { EventAttributes } from "@/components/event-attributes";
 import { IconList } from "@/components/icon-list";
-import { Input } from "@/components/input";
 import { Partners } from "@/components/partners";
-import { Textarea } from "@/components/textarea";
 
-export default function Home() {
+import BeAnExhibitorForm from "@/components/be-an-exhibitor-form";
+
+export default function Page() {
   return (
     <main>
       <section className="bg-secondary relative z-0 md:pt-40">
@@ -62,21 +62,7 @@ export default function Home() {
                   Fale com um de nossos consultores e <strong className="text-brand-secondary">reserve o seu estande</strong>
                 </p>
               </div>
-              <form className="grid gap-4 md:grid-cols-2" action="">
-                <Input label="Nome" name="name" type="text" placeholder="Seu nome" required />
-                <Input label="E-mail" name="email" type="email" placeholder="Seu e-mail" required />
-                <Input label="Telefone" name="phone" type="tel" placeholder="+55 (99) 9999-9999" required />
-                <Input label="Empresa" name="company" type="tel" placeholder="Nome da sua empresa" required />
-                <div className="col-span-2">
-                  <Textarea label="Mensagem" name="company" placeholder="Insira a sua mensagem" required />
-                </div>
-                <footer className="col-span-2 flex justify-between">
-                  <div></div>
-                  <Button size="md" variant="primary">
-                    Enviar
-                  </Button>
-                </footer>
-              </form>
+              <BeAnExhibitorForm />
             </div>
             <div className="md:col-span-4 lg:col-span-3">
               <div className="bg-brand-secondary text-on-brand-secondary overflow-hidden rounded-lg">
