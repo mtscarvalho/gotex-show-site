@@ -1,41 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { menu } from "@/data/menu";
+
 import { Button, Buttons } from "@/components/button";
 import { ColoredLine } from "@/components/colored-line";
 import { EventAttributes } from "@/components/event-attributes";
+import { getCurrentYear } from "@/lib/utils";
 
 export function Footer() {
-  const menu = [
-    {
-      title: "Início",
-      items: [
-        { label: "Sobre o evento", href: "/" },
-        { label: "Notícias", href: "/" },
-        { label: "Imprensa", href: "/" },
-        { label: "Contato", href: "/" },
-      ],
-    },
-    {
-      title: "Visitante",
-      items: [
-        { label: "Visite gratuitamente", href: "/" },
-        { label: "Como chegar", href: "/" },
-        { label: "Palestras", href: "/" },
-        { label: "Expositores", href: "/" },
-      ],
-    },
-    {
-      title: "Expositores",
-      items: [
-        { label: "Seja um expositor", href: "/" },
-        { label: "Tipos de cota", href: "/" },
-        { label: "Business Lounge", href: "/" },
-        { label: "Área restrita", href: "/" },
-      ],
-    },
-  ];
-
   return (
     <>
       <section className="relative py-24">
@@ -63,7 +36,7 @@ export function Footer() {
             <div className="space-y-6">
               <Image src="/2025/images/logos/gotex-show-horizontal-negative.svg" alt="Logo" width={120} height={46} />
               <p className="text-sm">
-                © 2025 Gotex Show. <br />
+                © {getCurrentYear()} Gotex Show. <br />
                 Todos os direitos reservados. <br />
                 Site criado por Jogajunto
               </p>

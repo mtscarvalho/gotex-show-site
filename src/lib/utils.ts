@@ -14,3 +14,9 @@ export function isValidYouTubeUrl(url: string): boolean {
   const youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|embed|shorts)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
   return youtubeRegex.test(url);
 }
+
+export function getCurrentYear(): number {
+  const now = new Date();
+  const options: Intl.DateTimeFormatOptions = { timeZone: "America/Sao_Paulo", year: "numeric" };
+  return parseInt(new Intl.DateTimeFormat("pt-BR", options).format(now), 10);
+}

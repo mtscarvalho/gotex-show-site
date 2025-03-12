@@ -41,7 +41,6 @@ const nextConfig: NextConfig = {
       /**
        * EN Pages
        */
-
       { source: "/en", destination: "/en/index.html" },
       { source: "/en/about", destination: "/en/about/index.html" },
       { source: "/en/be-an-exhibitor", destination: "/en/be-an-exhibitor/index.html" },

@@ -1,25 +1,89 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Menu } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
+
+import { menu } from "@/data/menu";
+import { getCurrentYear } from "@/lib/utils";
+
+import { useFocusTrap } from "@/hooks/useFocusTrap";
+import { useEscapeKey } from "@/hooks/useEscapeKey";
 
 import { Button } from "@/components/button";
-import { Topbar } from "@/components/topbar";
+import { LanguageSelector } from "@/components/language-selector";
+import { Social } from "@/components/social";
 
-export default function header() {
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
+  useFocusTrap(menuRef, isOpen);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    toggleRef.current?.focus();
+  };
+
+  useEscapeKey(() => {
+    if (isOpen) {
+      closeMenu();
+    }
+  });
+
+  // Block scroll when menu is open.
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  // Close menu when window is resized to desktop.
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1028) {
+        closeMenu();
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <header>
-      <Topbar />
-      <div className="py-6">
-        <div className="container">
-          <div className="flex items-center justify-between">
-            <div className="flex flex-1 items-center justify-between gap-4">
-              <Link href="/">
-                <Image src="/2025/images/logos/gotex-show-horizontal.svg" alt="Logo" width={120} height={46} />
-                <span className="sr-only">Página inicial</span>
-              </Link>
-              <nav className="hidden lg:block">
-                <ul className="flex items-center gap-2">
+      {/* <Topbar /> */}
+      <div className={`grid py-6 ${isOpen ? "h-svh overflow-auto" : "h-auto"}`} ref={menuRef}>
+        <div className="container flex flex-col">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-1 items-center justify-between">
+              <div className="flex gap-4">
+                <Link href="/">
+                  <Image className={`origin-top-left ${isOpen ? "md:scale-150" : ""}`} src="/2025/images/logos/gotex-show-horizontal.svg" alt="Logo" width={120} height={46} />
+                  <span className="sr-only">Página inicial</span>
+                </Link>
+                {isOpen && (
+                  <p className="ml-6 hidden translate-x-10 translate-y-4 text-sm lg:block">
+                    <span className="text-default">05 a 07 de agosto de 2025</span> <br /> Distrito Anhembi, Expo 2 - São Paulo
+                  </p>
+                )}
+              </div>
+              <nav className={`hidden ${isOpen ? "h-svh overflow-auto" : "lg:block"}`}>
+                <ul className="flex items-center">
                   <li>
                     <Button size="sm" variant="subtle" asChild>
                       <Link href="/">Quero visitar</Link>
@@ -32,7 +96,7 @@ export default function header() {
                   </li>
                   <li className="ml-2">
                     <Button size="sm" variant="outline" asChild>
-                      <Link href="/">Área restrita do expositor</Link>
+                      <Link href="/">Área do expositor</Link>
                     </Button>
                   </li>
                   <li className="ml-2">
@@ -43,10 +107,37 @@ export default function header() {
                 </ul>
               </nav>
             </div>
-            <div className="ml-6 flex items-center gap-6">
-              <Menu className="text-default" />
-            </div>
+            <LanguageSelector />
+            <button className="text-default flex size-8 cursor-pointer items-center justify-center" type="button" ref={toggleRef} onClick={toggleMenu} aria-label={isOpen ? "Fechar" : "Abrir"} aria-controls="menu" {...(isOpen ? { "aria-expanded": "true" } : { "aria-expanded": "false" })}>
+              {isOpen ? <X className="size-5" /> : <MenuIcon className="size-5" />}
+            </button>
           </div>
+          {isOpen && (
+            <div className="flex h-full flex-1 basis-full flex-col items-center gap-10" id="menu">
+              <div className="grid w-full flex-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:pt-24">
+                {menu.map((section) => (
+                  <div className="space-y-2" key={section.title}>
+                    <h2 className="border-default text-default-secondary border-b pb-3 font-semibold">{section.title}</h2>
+                    <ul className="-translate-x-3">
+                      {section.items.map((item) => (
+                        <li key={item.label}>
+                          <Button size="sm" variant="subtle" asChild>
+                            <Link href={item.href}>{item.label}</Link>
+                          </Button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className="flex w-full flex-col justify-between gap-4 md:flex-row">
+                <p className="text-sm">
+                  © {getCurrentYear()} Gotex Show. <br /> Todos os direitos reservados.
+                </p>
+                <Social />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
