@@ -9,7 +9,7 @@ type TableProps = {
 export function Table({ children, className }: TableProps) {
   return (
     <div className="-ml-8 min-w-[calc(100%+4rem)] overflow-hidden overflow-x-auto px-8 pb-4">
-      <div className="bg-default border-default min-w-min rounded-lg border text-sm text-balance md:text-base">
+      <div className="bg-default border-default min-w-min overflow-hidden rounded-lg border text-sm text-balance md:text-base">
         <table className={cn("w-full border-collapse rounded-lg", className)}>{children}</table>
       </div>
     </div>

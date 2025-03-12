@@ -15,6 +15,7 @@ import { useEscapeKey } from "@/hooks/useEscapeKey";
 import { Button } from "@/components/button";
 import { LanguageSelector } from "@/components/language-selector";
 import { Social } from "@/components/social";
+import { Topbar } from "./topbar";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,9 +66,9 @@ export default function Header() {
   }, []);
 
   return (
-    <header>
-      {/* <Topbar /> */}
-      <div className={`grid py-6 ${isOpen ? "h-svh overflow-auto" : "h-auto"}`} ref={menuRef}>
+    <header className={`grid grid-rows-[auto_1fr] ${isOpen ? "h-svh overflow-auto" : "h-auto"}`}>
+      <Topbar />
+      <div className={`grid py-6`} ref={menuRef}>
         <div className="container flex flex-col">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-1 items-center justify-between">
@@ -86,17 +87,17 @@ export default function Header() {
                 <ul className="flex items-center">
                   <li>
                     <Button size="sm" variant="subtle" asChild>
-                      <Link href="/">Quero visitar</Link>
+                      <Link href="/">Para visitantes</Link>
                     </Button>
                   </li>
                   <li>
                     <Button size="sm" variant="subtle" asChild>
-                      <Link href="/">Quero expor</Link>
+                      <Link href="/">Para expositores</Link>
                     </Button>
                   </li>
                   <li className="ml-2">
                     <Button size="sm" variant="primary" asChild>
-                      <Link href="/">Inscreva-se gratuitamente</Link>
+                      <Link href="/">Visite gratuitamente</Link>
                     </Button>
                   </li>
                 </ul>
