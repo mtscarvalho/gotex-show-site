@@ -49,5 +49,3 @@ Table.Head = TableHead;
 Table.Row = TableRow;
 Table.Cell = TableCell;
 Table.Header = TableHeader;
-
-export default Table;

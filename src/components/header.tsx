@@ -95,11 +95,6 @@ export default function Header() {
                     </Button>
                   </li>
                   <li className="ml-2">
-                    <Button size="sm" variant="outline" asChild>
-                      <Link href="/">Área do expositor</Link>
-                    </Button>
-                  </li>
-                  <li className="ml-2">
                     <Button size="sm" variant="primary" asChild>
                       <Link href="/">Inscreva-se gratuitamente</Link>
                     </Button>
@@ -114,14 +109,14 @@ export default function Header() {
           </div>
           {isOpen && (
             <div className="flex h-full flex-1 basis-full flex-col items-center gap-10" id="menu">
-              <div className="grid w-full flex-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:pt-24">
+              <div className="flex w-full flex-1 flex-col gap-10 pt-10 md:grid-cols-2 lg:grid lg:flex-1 lg:grid-cols-3 lg:pt-24">
                 {menu.map((section) => (
                   <div className="space-y-2" key={section.title}>
                     <h2 className="border-default text-default-secondary border-b pb-3 font-semibold">{section.title}</h2>
                     <ul className="-translate-x-3">
                       {section.items.map((item) => (
                         <li key={item.label}>
-                          <Button size="sm" variant="subtle" asChild>
+                          <Button size="sm" variant="subtle" className="w-full justify-start text-left" onClick={closeMenu} asChild>
                             <Link href={item.href}>{item.label}</Link>
                           </Button>
                         </li>

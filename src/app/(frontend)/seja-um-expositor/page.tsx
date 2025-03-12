@@ -10,7 +10,7 @@ import { ColoredLine } from "@/components/colored-line";
 import { EventAttributes } from "@/components/event-attributes";
 import { IconList } from "@/components/icon-list";
 import { Partners } from "@/components/partners";
-import Table from "@/components/table";
+import { Table } from "@/components/table";
 
 import BeAnExhibitorForm from "@/components/be-an-exhibitor-form";
 import Testimonials from "@/components/testimonials";
@@ -19,9 +19,9 @@ export default function Page() {
   return (
     <main>
       <section className="bg-secondary relative z-0 md:pt-40">
-        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/2025/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
-        <div className="container">
-          <div className="md:bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
+        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/2025/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={307} />
+        <div className="bg-default container md:bg-transparent">
+          <div className="bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
             <div className="space-y-4 pt-10 md:col-span-6 md:p-10 lg:col-span-7">
               <h1 className="text-default text-4xl font-medium">
                 <span className="text-brand">Seja um expositor</span> no maior evento têxtil do Brasil!
@@ -54,7 +54,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-secondary py-24">
+      <section className="bg-secondary py-24" id="contato">
         <div className="container">
           <div className="grid gap-16 lg:grid-cols-8">
             <div className="space-y-10 md:col-span-4 lg:col-span-5">
@@ -82,7 +82,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-24" id="beneficios">
         <div className="flex flex-col gap-y-12">
           <div className="container space-y-2 text-center">
             <h2 className="text-brand text-overline">Benefícios</h2>
@@ -135,7 +135,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-secondary relative z-0 overflow-hidden py-24">
+      <section className="bg-secondary relative z-0 overflow-hidden py-24" id="publico">
         <div className="container">
           <div className="grid items-center gap-16 md:grid-cols-2">
             <div className="space-y-4">
@@ -165,7 +165,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="bg-[url('/2025/images/bg-green-flying-fabric-right.webp')] bg-cover bg-no-repeat py-24">
+      <section className="bg-[url('/2025/images/bg-green-flying-fabric-right.webp')] bg-cover bg-no-repeat py-24" id="tipos-de-cotas">
         <div className="container flex flex-col gap-8">
           <div className="max-w-3xl space-y-4">
             <div className="space-y-2">

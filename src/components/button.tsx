@@ -9,7 +9,7 @@ const buttonVariants = tv({
   variants: {
     size: {
       md: "px-6 py-3",
-      sm: "py-2 px-6",
+      sm: "py-1.5 px-4",
     },
     variant: {
       primary: "bg-brand-primary text-on-brand hover:bg-brand-primary-hover disabled:bg-disabled disabled:border-disabled disabled:border disabled:text-on-disabled",
