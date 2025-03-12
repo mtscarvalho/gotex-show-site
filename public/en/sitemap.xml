@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://gotexshow.com.br/en/about/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/sobre-o-evento/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/about/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/be-an-exhibitor/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/seja-um-expositor/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/be-an-exhibitor/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/business-lounge/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/business-lounge/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/business-lounge/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/contact/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/contato/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/contact/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/exhibitors/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/expositores/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/exhibitors/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/lectures/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/palestras/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/lectures/" />
+	</url>
+	<url>
+		<loc>https://gotexshow.com.br/en/venue-directions/</loc>
+		<xhtml:link rel="alternate" hreflang="pt-br" href="https://gotexshow.com.br/como-chegar/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://gotexshow.com.br/en/venue-directions/" />
+	</url>
+</urlset>

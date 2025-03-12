@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lectures on Gotex Show</title>
+    <link>https://gotexshow.com.br/en/lectures/</link>
+    <description>Recent content in Lectures on Gotex Show</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://gotexshow.com.br/en/lectures/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
