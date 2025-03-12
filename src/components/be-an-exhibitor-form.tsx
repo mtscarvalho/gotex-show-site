@@ -2,10 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
-import ReCAPTCHA from "react-google-recaptcha";
 import { CheckCircle, Loader, XCircle } from "lucide-react";
-
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 import { Textarea } from "@/components/textarea";
@@ -19,10 +16,10 @@ export default function BeAnExhibitorForm() {
     company: "",
     message: "",
     terms: true,
+    hiddenField: "",
   };
 
   const [formData, setFormData] = useState(initialFormState);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [successMessage, setSuccessMessage] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -34,7 +31,7 @@ export default function BeAnExhibitorForm() {
     }
   }, [successMessage]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -49,13 +46,8 @@ export default function BeAnExhibitorForm() {
     }));
   };
 
-  const handleCaptchaChange = (token: string | null) => {
-    setCaptchaToken(token);
-  };
-
   const resetForm = () => {
     setFormData(initialFormState);
-    setCaptchaToken(null);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -64,8 +56,9 @@ export default function BeAnExhibitorForm() {
     setSuccessMessage("");
     setLoading(true);
 
-    if (!captchaToken) {
-      setErrorMessage("Please complete the reCAPTCHA.");
+    if (formData.hiddenField) {
+      console.log("Bot detected!");
+      setErrorMessage("Submission failed.");
       setLoading(false);
       return;
     }
@@ -73,13 +66,8 @@ export default function BeAnExhibitorForm() {
     try {
       const response = await fetch("/api/submit-form", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          captchaToken,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
@@ -105,6 +93,9 @@ export default function BeAnExhibitorForm() {
       <div className="col-span-2">
         <Textarea label="Mensagem" name="message" placeholder="Insira a sua mensagem" value={formData.message} onChange={handleChange} required />
       </div>
+      <div className="col-span-2 hidden">
+        <Input label="Hidden" name="hiddenField" type="text" value={formData.hiddenField} onChange={handleChange} />
+      </div>
       <div className="col-span-2">
         <div className="flex items-center space-x-2">
           <Checkbox id="terms" checked={formData.terms} onChange={handleCheckboxChange}>
@@ -114,9 +105,6 @@ export default function BeAnExhibitorForm() {
             </Link>
           </Checkbox>
         </div>
-      </div>
-      <div className="col-span-2 min-h-20">
-        <ReCAPTCHA sitekey="6LeXMPEqAAAAAF1Du4hCtddBPUsMQIMA70nKkjpz" onChange={handleCaptchaChange} />
       </div>
       <footer className="col-span-2 flex justify-end">
         <Button variant="primary" size="md" type="submit" disabled={loading}>

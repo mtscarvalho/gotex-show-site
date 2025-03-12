@@ -1,14 +1,10 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const { captchaToken, name, email, company, phone, message } = await req.json();
+  const { hiddenField, name, email, company, phone, message } = await req.json();
 
-  const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`;
-  const captchaResponse = await fetch(verificationUrl, { method: "POST" });
-  const captchaData = await captchaResponse.json();
-
-  if (!captchaData.success) {
-    return NextResponse.json({ error: "Captcha verification failed." }, { status: 400 });
+  if (hiddenField) {
+    return NextResponse.json({ error: "Bot detected!" }, { status: 400 });
   }
 
   try {
@@ -34,10 +30,8 @@ export async function POST(req: Request) {
       throw new Error("Failed to send data to RD Station.");
     }
 
-    console.log("Form submitted successfully!");
     return NextResponse.json({ message: "Form submitted successfully!" }, { status: 200 });
-  } catch (error) {
-    console.log(error);
+  } catch {
     return NextResponse.json({ error: "Error sending data to RD Station." }, { status: 500 });
   }
 }
