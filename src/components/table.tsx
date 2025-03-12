@@ -8,8 +8,10 @@ type TableProps = {
 
 export function Table({ children, className }: TableProps) {
   return (
-    <div className="bg-default border-default overflow-hidden overflow-x-auto rounded-lg border">
-      <table className={cn("w-full border-collapse rounded-lg", className)}>{children}</table>
+    <div className="-ml-8 min-w-[calc(100%+4rem)] overflow-hidden overflow-x-auto px-8 pb-4">
+      <div className="bg-default border-default min-w-min rounded-lg border text-sm text-balance md:text-base">
+        <table className={cn("w-full border-collapse rounded-lg", className)}>{children}</table>
+      </div>
     </div>
   );
 }
