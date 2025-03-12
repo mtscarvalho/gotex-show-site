@@ -70,7 +70,9 @@ export default function Page() {
               <div className="bg-brand-secondary text-on-brand-secondary overflow-hidden rounded-lg">
                 <ColoredLine />
                 <div className="space-y-6 p-10">
-                  <h2 className="text-3xl font-semibold">Gotex Show - 12ª edição</h2>
+                  <h2 className="text-3xl font-semibold">
+                    Gotex Show <br /> 12ª edição
+                  </h2>
                   <p>Encontro Internacional Têxtil, de Moda e Negócios</p>
                   <EventAttributes />
                 </div>

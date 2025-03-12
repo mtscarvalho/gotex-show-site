@@ -4,7 +4,6 @@ import { Button } from "@/components/button";
 import { IconList } from "@/components/icon-list";
 import { Calendar, CheckCircle, Clock, MapPin, Rocket, Users } from "lucide-react";
 import { ColoredLine } from "@/components/colored-line";
-import Card from "@/components/card-icon";
 import { Input } from "@/components/input";
 import { Textarea } from "@/components/textarea";
 
@@ -71,7 +70,9 @@ export default function Home() {
               <div className="bg-brand-secondary text-on-brand-secondary overflow-hidden rounded-lg">
                 <ColoredLine />
                 <div className="space-y-6 p-10">
-                  <h2 className="text-3xl font-semibold">Gotex Show - 12ª edição</h2>
+                  <h2 className="text-3xl font-semibold">
+                    Gotex Show <br /> 12ª edição
+                  </h2>
                   <p>Encontro Internacional Têxtil, de Moda e Negócios</p>
                   <IconList>
                     <IconList.Item icon={Users}>Evento presencial</IconList.Item>

@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
       /**
        * PT-BR Pages
        */
+      { source: "/", destination: "/index.html" },
       { source: "/business-lounge", destination: "/business-lounge/index.html" },
       { source: "/como-chegar", destination: "/como-chegar/index.html" },
       { source: "/contato", destination: "/contato/index.html" },
