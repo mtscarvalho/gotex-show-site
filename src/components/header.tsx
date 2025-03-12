@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +23,7 @@ export default function Header() {
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
-  useFocusTrap(menuRef, isOpen);
+  useFocusTrap(menuRef as RefObject<HTMLElement>, isOpen);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
