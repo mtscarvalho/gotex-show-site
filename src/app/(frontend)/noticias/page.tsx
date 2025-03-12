@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <section className="relative md:pt-40">
-        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
+        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/2025/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
         <div className="container">
           <div className="md:bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
             <div className="space-y-4 pt-10 md:col-span-6 md:p-10 lg:col-span-7">
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
             </div>
             <div className="p-10 pb-0 md:col-span-6 lg:col-span-5">
-              <Image src="/images/seja-um-expositor/seja-um-expositor.webp" alt="Pessoas no evento da Gotex Show" width={370} height={414} />
+              <Image src="/2025/images/seja-um-expositor/seja-um-expositor.webp" alt="Pessoas no evento da Gotex Show" width={370} height={414} />
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-brand-secondary bg-[url('/images/bg-blue-flying-fabric-left.webp')] bg-center bg-no-repeat py-24">
+    <section className="bg-brand-secondary bg-[url('/2025/images/bg-blue-flying-fabric-left.webp')] bg-center bg-no-repeat py-24">
       <div className="container max-w-4xl space-y-8">
         <h2 className="text-on-brand text-center text-3xl font-semibold text-balance">Depoimentos</h2>
         <Swiper {...heroSwiperOptions}>

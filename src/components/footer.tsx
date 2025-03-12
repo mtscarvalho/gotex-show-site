@@ -61,7 +61,7 @@ export function Footer() {
         <div className="container">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-6">
-              <Image src="/images/logos/gotex-show-horizontal-negative.svg" alt="Logo" width={120} height={46} />
+              <Image src="/2025/images/logos/gotex-show-horizontal-negative.svg" alt="Logo" width={120} height={46} />
               <p className="text-sm">
                 © 2025 Gotex Show. <br />
                 Todos os direitos reservados. <br />

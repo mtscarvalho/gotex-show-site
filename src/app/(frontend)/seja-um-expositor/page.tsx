@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <main>
       <section className="bg-secondary relative z-0 md:pt-40">
-        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
+        <Image className="w-full object-cover md:absolute md:top-0 md:-z-10 md:h-1/2" src="/2025/images/seja-um-expositor/hero.webp" alt="Pessoas no evento da Gotex Show" width={1400} height={373} />
         <div className="container">
           <div className="md:bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
             <div className="space-y-4 pt-10 md:col-span-6 md:p-10 lg:col-span-7">
@@ -48,7 +48,7 @@ export default function Page() {
               </Buttons>
             </div>
             <div className="p-10 pb-0 md:col-span-6 lg:col-span-5">
-              <Image src="/images/seja-um-expositor/seja-um-expositor.webp" alt="Pessoas no evento da Gotex Show" width={370} height={414} />
+              <Image src="/2025/images/seja-um-expositor/seja-um-expositor.webp" alt="Pessoas no evento da Gotex Show" width={370} height={414} />
             </div>
           </div>
         </div>
@@ -90,18 +90,18 @@ export default function Page() {
           </div>
           <div className="container max-w-7xl">
             <div className="flex flex-wrap justify-center gap-4">
-              <Image src="/images/seja-um-expositor/flag-bangladesh.svg" alt="Bandeira Bangladesh" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-bolivia.svg" alt="Bandeira Bolivia" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-brazil.svg" alt="Bandeira Brasil" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-china.svg" alt="Bandeira China" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-egypt.svg" alt="Bandeira Egito" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-usa.svg" alt="Bandeira estadoos Unidos da America" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-italy.svg" alt="Bandeira Italia" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-india.svg" alt="Bandeira India" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-mexico.svg" alt="Bandeira Mexico" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-coreia.svg" alt="Bandeira Coreia" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-peru.svg" alt="Bandeira Peru" width={83} height={40} loading="lazy" />
-              <Image src="/images/seja-um-expositor/flag-turkey.svg" alt="Bandeira Turquia" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-bangladesh.svg" alt="Bandeira Bangladesh" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-bolivia.svg" alt="Bandeira Bolivia" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-brazil.svg" alt="Bandeira Brasil" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-china.svg" alt="Bandeira China" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-egypt.svg" alt="Bandeira Egito" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-usa.svg" alt="Bandeira estadoos Unidos da America" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-italy.svg" alt="Bandeira Italia" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-india.svg" alt="Bandeira India" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-mexico.svg" alt="Bandeira Mexico" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-coreia.svg" alt="Bandeira Coreia" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-peru.svg" alt="Bandeira Peru" width={83} height={40} loading="lazy" />
+              <Image src="/2025/images/seja-um-expositor/flag-turkey.svg" alt="Bandeira Turquia" width={83} height={40} loading="lazy" />
             </div>
           </div>
           <div className="container space-y-6">
@@ -156,14 +156,14 @@ export default function Page() {
               </Buttons>
             </div>
             <div className="relative">
-              <Image className="m-auto" src="/images/seja-um-expositor/perfil-dos-visitantes.webp" alt="Mosaico de fotos sobre o publico dentro do evento da Gotex" width={518} height={475} loading="lazy" />
+              <Image className="m-auto" src="/2025/images/seja-um-expositor/perfil-dos-visitantes.webp" alt="Mosaico de fotos sobre o publico dentro do evento da Gotex" width={518} height={475} loading="lazy" />
               <div className="absolute top-0 -z-10 h-[100%] w-[100%] scale-[500%] rotate-180 bg-[#60C8B3] [clip-path:polygon(0_0,100%_0,100%_100%)] md:origin-center md:rotate-0"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[url('/images/bg-green-flying-fabric-right.webp')] bg-cover bg-no-repeat py-24">
+      <section className="bg-[url('/2025/images/bg-green-flying-fabric-right.webp')] bg-cover bg-no-repeat py-24">
         <div className="container flex flex-col gap-8">
           <div className="max-w-3xl space-y-4">
             <div className="space-y-2">

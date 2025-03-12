@@ -15,7 +15,7 @@ export default function header() {
           <div className="flex items-center justify-between">
             <div className="flex flex-1 items-center justify-between gap-4">
               <Link href="/">
-                <Image src="/images/logos/gotex-show-horizontal.svg" alt="Logo" width={120} height={46} />
+                <Image src="/2025/images/logos/gotex-show-horizontal.svg" alt="Logo" width={120} height={46} />
                 <span className="sr-only">Página inicial</span>
               </Link>
               <nav className="hidden lg:block">
