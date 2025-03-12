@@ -97,7 +97,7 @@ export default function Header() {
                   </li>
                   <li className="ml-2">
                     <Button size="sm" variant="primary" asChild>
-                      <Link href="/">Visite gratuitamente</Link>
+                      <Link href="/">Inscreva-se gratuitamente</Link>
                     </Button>
                   </li>
                 </ul>

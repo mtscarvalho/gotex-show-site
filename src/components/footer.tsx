@@ -15,7 +15,7 @@ export function Footer() {
         <div className="container">
           <div className="grid gap-x-16 gap-y-6 md:grid-cols-2">
             <div className="space-y-4">
-              <h2 className="text-default text-3xl font-semibold">Faça negócios de sucesso no 12ª Encontro Internacional Têxtil de Moda e Negócios!</h2>
+              <h2 className="text-default heading">Faça negócios de sucesso no 12ª Encontro Internacional Têxtil de Moda e Negócios!</h2>
               <Buttons>
                 <Button size="md" variant="primary" asChild>
                   <Link href="/">Quero expor</Link>

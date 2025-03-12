@@ -444,6 +444,26 @@
     @apply block leading-tight tracking-[0.16em] uppercase;
   }
 
+  .title-lg {
+    @apply text-7xl leading-tight font-medium tracking-[-0.03em] text-balance;
+  }
+
+  .title-sm {
+    @apply text-5xl leading-tight font-medium tracking-[-0.02em] text-balance;
+  }
+
+  .subtitle {
+    @apply text-4xl leading-tight font-medium text-balance;
+  }
+
+  .heading {
+    @apply text-3xl leading-tight font-semibold tracking-[-0.02em] text-balance;
+  }
+
+  .subheading {
+    @apply text-2xl leading-tight font-normal text-balance;
+  }
+
   /*  */
   /*  */
   /*  */

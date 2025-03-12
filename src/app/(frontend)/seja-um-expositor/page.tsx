@@ -23,7 +23,7 @@ export default function Page() {
         <div className="bg-default container md:bg-transparent">
           <div className="bg-default md:border-default grid items-end rounded md:grid-cols-12 md:border md:shadow">
             <div className="space-y-4 pt-10 md:col-span-6 md:p-10 lg:col-span-7">
-              <h1 className="text-default text-4xl font-medium">
+              <h1 className="text-default subtitle">
                 <span className="text-brand">Seja um expositor</span> no maior evento têxtil do Brasil!
               </h1>
               <p>A Gotex Show reúne compradores, lojistas, confeccionistas e importadores do Brasil e do exterior em busca das últimas tendências e inovações da indústria têxtil.</p>
@@ -60,7 +60,7 @@ export default function Page() {
             <div className="space-y-10 md:col-span-4 lg:col-span-5">
               <div className="space-y-2">
                 <h2 className="text-overline text-brand-secondary">Contato</h2>
-                <p className="text-default text-3xl font-semibold text-balance">
+                <p className="text-default heading">
                   Fale com um de nossos consultores e <strong className="text-brand-secondary">reserve o seu estande</strong>
                 </p>
               </div>
@@ -86,7 +86,7 @@ export default function Page() {
         <div className="flex flex-col gap-y-12">
           <div className="container space-y-2 text-center">
             <h2 className="text-brand text-overline">Benefícios</h2>
-            <p className="text-default text-3xl font-semibold text-balance">
+            <p className="text-default heading">
               <span className="text-brand">Por que participar</span> do Encontro Internacional Têxtil, de Moda e Negócios?
             </p>
           </div>
@@ -170,7 +170,7 @@ export default function Page() {
           <div className="max-w-3xl space-y-4">
             <div className="space-y-2">
               <h2 className="text-brand text-overline">Tipos de cotas</h2>
-              <p className="text-default text-3xl font-semibold text-balance">Conheça as opções de patrocínio disponíveis</p>
+              <p className="text-default heading">Conheça as opções de patrocínio disponíveis</p>
             </div>
             <p>Temos estandes disponíveis que vão de 9 m² até uma ilha completa de 72 m². Você pode escolher o tamanho ideal para sua empresa e também decidir qual das três opções de patrocínio prefere:</p>
           </div>
