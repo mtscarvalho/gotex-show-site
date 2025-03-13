@@ -15,10 +15,14 @@ import { BeAnExhibitorForm } from "@/components/be-an-exhibitor-form";
 import { Testimonials } from "@/components/testimonials";
 
 import imageHero from "@/public/2025/images/seja-um-expositor/hero.webp";
+import { useTranslations } from "next-intl";
 
 export default function Page() {
+  const t = useTranslations("sejaUmExpositor");
+
   return (
     <main>
+      <p>Lerooo</p>
       <section className="bg-secondary relative z-0">
         <div className="relative -z-10">
           <Image className="h-60 w-full object-cover md:h-80" src={imageHero} placeholder="blur" alt="Pessoas no evento da Gotex Show" width={1200} height={320} />
